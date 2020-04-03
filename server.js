@@ -4,11 +4,8 @@ const routes = require("../routes");
 const port = 5000;
 const app = express();
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../views"));
-
 // Set folder to serve static files
-app.use("/assets", express.static(path.join(__dirname, "assets")));
+app.use("/assets", express.static(path.join(__dirname, "/dist/assets")));
 
 app.use("/", routes());
 
